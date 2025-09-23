@@ -1,6 +1,7 @@
 package solutions.arrays;
 
-/* Question: https://leetcode.com/problems/contiguous-array/
+/* 
+Question: https://leetcode.com/problems/contiguous-array/
 Need to find the longest subarray with equal number of 0s and 1s.
 
 Approach:
@@ -10,8 +11,23 @@ Approach:
    sum.
 4. If the prefix sum is already in the hashmap, then the subarray from the index of the 
    first occurrence of the prefix sum to the current index is the longest subarray with 
-   equal number of 0s and 1s. */
-
+   equal number of 0s and 1s. 
+*/
+/* 
+LEARNINGS:
+Transforming Input Data: 
+The transformation of 0s to -1s is a clever trick that simplifies the problem.
+By converting the problem into finding subarrays with a sum of 0, we can leverage the prefix sum technique more effectively.
+Edge Case Handling: 
+Initializing the HashMap with a prefix sum of 0 at index -1 is an important step. 
+Time Complexity: 
+The solution runs in O(n) time complexity, 
+Space Complexity: 
+The space complexity is O(n) in the worst case due to the HashMap storing prefix sums.
+Practical Application: 
+This approach can be applied to other similar problems involving subarrays and equal distributions of 
+elements, making it a versatile technique in algorithm design.   
+*/
 
 import utils.IOUtils;
 import java.util.*;
@@ -44,3 +60,4 @@ public class ContiguousArray {
         System.out.println("Result: " + sol.findMaxLength(nums));
     }
 }
+
