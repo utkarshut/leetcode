@@ -9,6 +9,21 @@ import java.util.Arrays;
 // if any one item array exhausted end of while loop 
 // then merge the remaining array by while loop
 // finally replace item in original array using index
+
+// arr = [5, 2, 4, 7]
+// l = 0, r = 3
+// sort(0,3)
+// ├─ sort(0,1)
+// │ ├─ sort(0,0) → return
+// │ ├─ sort(1,1) → return
+// │ └─ merge(0,0,1) // merges [5] & [2]
+// │
+// ├─ sort(2,3)
+// │ ├─ sort(2,2) → return
+// │ ├─ sort(3,3) → return
+// │ └─ merge(2,2,3) // merges [4] & [7]
+// │
+// └─ merge(0,1,3) // merges [2,5] & [4,7]
 public class MergeSort {
     public void mergeSort(int[] arr, int l, int r){
         if(l==r) return;
