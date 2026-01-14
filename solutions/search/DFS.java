@@ -47,3 +47,6 @@ class Node {
         this.data = data;
     }
 }
+
+// “Node.class is generated at compile time, but it is loaded by the JVM only 
+// when the class is actually referenced at runtime.”
